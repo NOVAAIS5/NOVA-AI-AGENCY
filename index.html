@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NOVA AI GROWTH | Turn Leads Into Appointments</title>
+  <meta name="description" content="NOVA AI GROWTH helps dental practices capture, follow up with and convert more leads using AI-powered automation.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #222;
+    }
+
+    .nav-inner {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #aaa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #aaa;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-button {
+      background: white;
+      color: black !important;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 120px 0 100px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid #333;
+      background: #111;
+      color: #bbb;
+      padding: 8px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin: auto;
+      font-size: clamp(45px, 8vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+    }
+
+    .hero h1 span {
+      color: #aaa;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 30px auto;
+      color: #aaa;
+      font-size: 19px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 9px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button-primary {
+      background: white;
+      color: black;
+    }
+
+    .button-secondary {
+      border: 1px solid #333;
+      color: white;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .stats {
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding: 35px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+
+    .stat {
+      padding: 10px;
+    }
+
+    .stat h3 {
+      font-size: 32px;
+    }
+
+    .stat p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: #888;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      max-width: 750px;
+    }
+
+    .section-description {
+      color: #999;
+      max-width: 650px;
+      margin-top: 20px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 50px;
+    }
+
+    .problem-card {
+      border: 1px solid #222;
+      background: #0b0b0b;
+      padding: 30px;
+      border-radius: 14px;
+    }
+
+    .problem-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .problem-card p {
+      color: #888;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 50px;
+    }
+
+    .service-card {
+      background: #0b0b0b;
+      border: 1px solid #222;
+      border-radius: 14px;
+      padding: 30px;
+      transition: 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #555;
+    }
+
+    .service-number {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #888;
+      font-size: 15px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 50px;
+    }
+
+    .process-card {
+      padding: 25px;
+      border-top: 1px solid #444;
+    }
+
+    .process-card span {
+      color: #666;
+      font-size: 13px;
+    }
+
+    .process-card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .process-card p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .pricing {
+      max-width: 700px;
+      margin: 50px auto 0;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 45px;
+      background: #0b0b0b;
+    }
+
+    .pricing h3 {
+      font-size: 32px;
+    }
+
+    .price {
+      font-size: 50px;
+      font-weight: 800;
+      margin: 15px 0;
+    }
+
+    .price small {
+      font-size: 15px;
+      color: #777;
+      font-weight: normal;
+    }
+
+    .pricing ul {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .pricing li {
+      padding: 8px 0;
+      color: #aaa;
+    }
+
+    .pricing li::before {
+      content: "✓";
+      color: white;
+      margin-right: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #0b0b0b;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .cta h2 {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1;
+      letter-spacing: -3px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .cta p {
+      color: #888;
+      max-width: 600px;
+      margin: 25px auto;
+    }
+
+    footer {
+      padding: 40px 0;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 90px 0 70px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .problem-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .pricing {
+        padding: 30px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">NOVA <span>AI GROWTH</span></a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="nav-button">Book Audit</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="badge">AI-POWERED GROWTH SYSTEMS FOR DENTAL PRACTICES</div>
+      <h1>Turn More Leads Into <span>Booked Appointments.</span></h1>
+      <p>We help dental practices capture missed opportunities, follow up with leads automatically and turn conversations into appointments using AI-powered automation.</p>
+      <div class="buttons">
+        <a href="#contact" class="button button-primary">Get Your Free Growth Audit</a>
+        <a href="#services" class="button button-secondary">See What We Do</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat"><h3>24/7</h3><p>AI Lead Response</p></div>
+      <div class="stat"><h3>Instant</h3><p>Lead Follow-Up</p></div>
+      <div class="stat"><h3>More</h3><p>Appointment Opportunities</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-label">THE PROBLEM</div>
+      <h2 class="section-title">Your next patient could already be looking for you.</h2>
+      <p class="section-description">But if nobody responds quickly, follows up or makes booking easy, that potential patient may choose another practice.</p>
+      <div class="problem-grid">
+        <div class="problem-card"><h3>Missed Calls</h3><p>Potential patients call when your staff is unavailable.</p></div>
+        <div class="problem-card"><h3>Slow Follow-Up</h3><p>Leads often wait too long for a response.</p></div>
+        <div class="problem-card"><h3>Lost Website Leads</h3><p>Visitors leave without taking the next step.</p></div>
+        <div class="problem-card"><h3>Old Leads</h3><p>Previous enquiries may never receive another follow-up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-label">THE SYSTEM</div>
+      <h2 class="section-title">Your AI-powered growth engine.</h2>
+      <p class="section-description">We combine automation, lead management and AI-powered communication to create a smoother path from lead to appointment.</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-number">01</div><h3>AI Receptionist</h3><p>Help handle incoming enquiries and direct potential patients toward the appropriate next step.</p></div>
+        <div class="service-card"><div class="service-number">02</div><h3>Instant Follow-Up</h3><p>Automate responses so new leads don't sit unanswered.</p></div>
+        <div class="service-card"><div class="service-number">03</div><h3>Appointment Booking</h3><p>Make it easier for qualified prospects to schedule appointments.</p></div>
+        <div class="service-card"><div class="service-number">04</div><h3>Missed-Call Recovery</h3><p>Create automated follow-up workflows for missed opportunities.</p></div>
+        <div class="service-card"><div class="service-number">05</div><h3>Lead Reactivation</h3><p>Re-engage previous enquiries with carefully designed campaigns.</p></div>
+        <div class="service-card"><div class="service-number">06</div><h3>Growth Dashboard</h3><p>Track leads, conversations and appointment activity in one place.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-label">HOW IT WORKS</div>
+      <h2 class="section-title">Simple system. Clear process.</h2>
+      <div class="process">
+        <div class="process-card"><span>STEP 01</span><h3>Capture</h3><p>Capture enquiries from your website, calls and other channels.</p></div>
+        <div class="process-card"><span>STEP 02</span><h3>Respond</h3><p>AI-powered workflows help respond quickly and consistently.</p></div>
+        <div class="process-card"><span>STEP 03</span><h3>Qualify</h3><p>Organize conversations and identify the appropriate next step.</p></div>
+        <div class="process-card"><span>STEP 04</span><h3>Book</h3><p>Guide qualified prospects toward an appointment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <div class="section-label">GROWTH PLAN</div>
+      <h2 class="section-title">Built around your practice.</h2>
+      <div class="pricing">
+        <h3>AI Growth System</h3>
+        <div class="price">Custom <small>/ month</small></div>
+        <p style="color:#888;">Every practice has different lead volume, systems and growth objectives.</p>
+        <ul>
+          <li>AI lead response</li>
+          <li>Automated follow-up</li>
+          <li>Appointment workflow</li>
+          <li>Missed-call recovery</li>
+          <li>Lead reactivation</li>
+          <li>Monthly performance reporting</li>
+        </ul>
+        <a href="#contact" class="button button-primary">Request Your Growth Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>Stop losing potential patients.</h2>
+      <p>Get a free look at where your practice may be losing leads and how AI automation could improve your follow-up process.</p>
+      <a href="mailto:novaaisohans@gmail.com?subject=Free%20AI%20Growth%20Audit" class="button button-primary">Book My Free Audit</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>&copy; 2026 NOVA AI GROWTH</div>
+      <div>AI Growth Systems for Modern Businesses</div>
+    </div>
+  </footer>
+</body>
+</html>
